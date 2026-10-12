@@ -1,3 +1,4 @@
+import { siteUrl } from "../lib/urls";
 import { useEffect, useState } from "react";
 import { Copy, Minus, Plus, ShoppingBag, Trash2, Phone } from "lucide-react";
 import restaurant from "../data/restaurant.json";
@@ -40,7 +41,7 @@ export default function CartDrawer({
             <p>
               Entdecke unsere Speisekarte und stelle deine Auswahl zusammen.
             </p>
-            <a className="button" href="/#speisekarte" onClick={onClose}>
+            <a className="button" href={siteUrl("#speisekarte")} onClick={onClose}>
               Speisekarte entdecken <Arrow />
             </a>
           </div>

@@ -1,3 +1,4 @@
+import { siteUrl } from "../lib/urls";
 import { useEffect, useRef, type ReactNode } from "react";
 import { ArrowUpRight, X } from "lucide-react";
 export function Arrow() {
@@ -46,10 +47,10 @@ export function Photo({
   return (
     <img
       className={`photo ${className}`}
-      src={`/images/${name}.webp`}
+      src={siteUrl(`images/${name}.webp`)}
       srcSet={
         ["sushi-table", "sushi-bowls", "pho", "sake"].includes(name)
-          ? `/images/${name}-small.webp ${name === "pho" ? 600 : 720}w, /images/${name}.webp ${name === "sushi-table" ? 1440 : name === "sushi-bowls" ? 1024 : name === "pho" ? 790 : 972}w`
+          ? `${siteUrl(`images/${name}-small.webp`)} ${name === "pho" ? 600 : 720}w, ${siteUrl(`images/${name}.webp`)} ${name === "sushi-table" ? 1440 : name === "sushi-bowls" ? 1024 : name === "pho" ? 790 : 972}w`
           : undefined
       }
       sizes={eager ? "100vw" : "(max-width: 640px) 90vw, 600px"}

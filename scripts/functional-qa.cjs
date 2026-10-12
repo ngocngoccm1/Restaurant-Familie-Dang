@@ -243,7 +243,7 @@ const fs = require("fs"),
     await p.keyboard.press("Escape");
   }
   check("Variant dialog fits all seven requested widths");
-  await p.goto(baseUrl + "/impressum", { waitUntil: "networkidle" });
+  await p.goto(baseUrl + "/impressum.html", { waitUntil: "networkidle" });
   assert.equal(
     await p.getByRole("heading", { level: 1 }).innerText(),
     "Impressum",
@@ -253,7 +253,7 @@ const fs = require("fs"),
       "noch kein vollständiges Impressum",
     ),
   );
-  await p.goto(baseUrl + "/datenschutz", { waitUntil: "networkidle" });
+  await p.goto(baseUrl + "/datenschutz.html", { waitUntil: "networkidle" });
   assert.equal(
     await p.getByRole("heading", { level: 1 }).innerText(),
     "Datenschutz",
@@ -281,14 +281,14 @@ const fs = require("fs"),
     .locator("a[href]")
     .evaluateAll((as) => [...new Set(as.map((a) => a.getAttribute("href")))]);
   for (const href of links.filter(
-    (h) => h.startsWith("/#") || h.startsWith("#"),
+    (h) => h.includes("#") && !/^https?:/.test(h),
   )) {
     const id = href.split("#")[1];
     assert((await p.locator('[id="' + id + '"]').count()) > 0, href);
   }
   for (const path of [
-    "/impressum",
-    "/datenschutz",
+    "/impressum.html",
+    "/datenschutz.html",
     "/speisekarte.pdf",
     "/favicon.svg",
   ])

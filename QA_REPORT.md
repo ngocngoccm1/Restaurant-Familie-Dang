@@ -48,3 +48,12 @@ Screenshots include desktop/mobile full-page, hero, menu, cart, gallery/contact,
 - Image origin permissions beyond client-provided document need operator confirmation before public release.
 - Vercel and Netlify configuration included; no public deployment or real domain configured. Canonical and absolute Open Graph URL await domain.
 - Browser QA covers Chromium; real iOS Safari, Android hardware, real phone calls and a formal accessibility/SEO audit were not performed.
+
+## GitHub Pages verification — 12 October 2026
+
+- Built with `PAGES_BASE_PATH=/Restaurant-Familie-Dang/`; generated `dist/index.html`, `impressum.html`, and `datenschutz.html`.
+- Served the compiled output under `/Restaurant-Familie-Dang/` using Python's static HTTP server, with no SPA fallback. Both legal documents and the PDF returned HTTP 200 directly.
+- Re-ran the complete functional browser suite against that subpath: all 191 menu rows, 29 categories, prices, search, variants/extras, cart persistence, clipboard, phone handoff, mobile navigation and dialogs passed. No browser errors or failed responses.
+- Re-ran responsive screenshots at 375, 390, 430, 768, 1024, 1440 and 1920px: no horizontal overflow, no broken images. Visually inspected desktop hero, mobile hero and mobile cart screenshots.
+- Independent menu validation passed (318 printed prices); all four cart unit tests passed. Vite emitted a dependency-scan shutdown warning after the unit suite; the production build and browser suite completed without errors.
+- Deployment workflow builds and uploads `dist` to Pages instead of serving the development source `index.html` directly. The GitHub Pages setup is documented in `GITHUB_PAGES.md`.

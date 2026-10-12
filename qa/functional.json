@@ -127,18 +127,18 @@
   "links": [
     "#main",
     "#start",
-    "/#restaurant",
-    "/#speisekarte",
-    "/#einblicke",
-    "/#kontakt",
+    "/Restaurant-Familie-Dang/#restaurant",
+    "/Restaurant-Familie-Dang/#speisekarte",
+    "/Restaurant-Familie-Dang/#einblicke",
+    "/Restaurant-Familie-Dang/#kontakt",
     "tel:+4990744299172",
     "#speisekarte",
     "#restaurant",
-    "/speisekarte.pdf",
+    "/Restaurant-Familie-Dang/speisekarte.pdf",
     "https://www.google.com/maps/search/?api=1&query=Dillinger%20Str.%2017%2C%2089420%20H%C3%B6chst%C3%A4dt%20an%20der%20Donau",
     "tel:+4917687889979",
-    "/",
-    "/impressum",
-    "/datenschutz"
+    "/Restaurant-Familie-Dang/",
+    "/Restaurant-Familie-Dang/impressum.html",
+    "/Restaurant-Familie-Dang/datenschutz.html"
   ]
 }

@@ -1,3 +1,4 @@
+import { siteUrl } from "../lib/urls";
 import restaurant from "../data/restaurant.json";
 import { Arrow, SectionRule } from "./UI";
 export default function Legal({ page }: { page: "impressum" | "datenschutz" }) {
@@ -87,7 +88,7 @@ export default function Legal({ page }: { page: "impressum" | "datenschutz" }) {
           </p>
         </>
       )}
-      <a className="button" href="/">
+      <a className="button" href={siteUrl("")}>
         Zurück zum Restaurant
         <Arrow />
       </a>

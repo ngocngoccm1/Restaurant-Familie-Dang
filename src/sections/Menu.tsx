@@ -1,3 +1,4 @@
+import { siteUrl } from "../lib/urls";
 import { useMemo, useState } from "react";
 import { Search, Plus, X, ChevronDown, FileDown } from "lucide-react";
 import menu from "../data/menu.json";
@@ -51,7 +52,7 @@ export default function Menu({
             <h2>Was darf es sein?</h2>
           </div>
           <div className="menu-tools">
-            <a href="/speisekarte.pdf" target="_blank" rel="noreferrer">
+            <a href={siteUrl("speisekarte.pdf")} target="_blank" rel="noreferrer">
               <FileDown size={16} /> PDF ansehen
             </a>
             <button onClick={onAllergens}>Allergene & Zusatzstoffe</button>

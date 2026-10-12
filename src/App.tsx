@@ -1,3 +1,4 @@
+import { siteUrl } from "./lib/urls";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { Menu as MenuIcon, X, ShoppingBag, Phone } from "lucide-react";
 import restaurant from "./data/restaurant.json";
@@ -21,7 +22,7 @@ export default function App() {
     [allergens, setAllergens] = useState(false),
     [gallery, setGallery] = useState<string | null>(null),
     [toast, setToast] = useState("");
-  const legalPage = location.pathname.replace(/\/$/, "").slice(1);
+  const legalPage = location.pathname.split("/").filter(Boolean).at(-1)?.replace(/\.html$/, "");
   const isLegal = legalPage === "impressum" || legalPage === "datenschutz";
   useEffect(() => {
     document.title = isLegal
@@ -71,7 +72,7 @@ export default function App() {
       <header className="header">
         <a
           className="wordmark"
-          href={isLegal ? "/" : "#start"}
+          href={isLegal ? siteUrl() : "#start"}
           aria-label="Familie Dang Startseite"
         >
           <span>RESTAURANT</span>
@@ -80,10 +81,10 @@ export default function App() {
           </strong>
         </a>
         <nav className="desktop-nav" aria-label="Hauptnavigation">
-          <a href="/#restaurant">Restaurant</a>
-          <a href="/#speisekarte">Speisekarte</a>
-          <a href="/#einblicke">Einblicke</a>
-          <a href="/#kontakt">Kontakt</a>
+          <a href={siteUrl("#restaurant")}>Restaurant</a>
+          <a href={siteUrl("#speisekarte")}>Speisekarte</a>
+          <a href={siteUrl("#einblicke")}>Einblicke</a>
+          <a href={siteUrl("#kontakt")}>Kontakt</a>
         </nav>
         <div className="header-actions">
           <a className="header-phone" href={restaurant.phoneHref}>
@@ -125,7 +126,7 @@ export default function App() {
               ["Einblicke", "einblicke"],
               ["Kontakt & Öffnungszeiten", "kontakt"],
             ].map(([name, id]) => (
-              <a key={id} href={`/#${id}`} onClick={() => setMobileNav(false)}>
+              <a key={id} href={siteUrl(`#${id}`)} onClick={() => setMobileNav(false)}>
                 {name}
                 <Arrow />
               </a>
@@ -160,12 +161,12 @@ export default function App() {
       <footer className="footer">
         <div className="footer-top">
           <span className="eyebrow">Sushi-Bar & vietnamesische Küche</span>
-          <a href="/#speisekarte">
+          <a href={siteUrl("#speisekarte")}>
             Noch ein Lieblingsgericht?
             <Arrow />
           </a>
         </div>
-        <a className="footer-wordmark" href="/">
+        <a className="footer-wordmark" href={siteUrl("")}>
           FAMILIE DANG<span>.</span>
         </a>
         <div className="footer-info">
@@ -190,8 +191,8 @@ export default function App() {
         <div className="footer-bottom">
           <span>© 2026 Restaurant Familie Dang</span>
           <div>
-            <a href="/impressum">Impressum</a>
-            <a href="/datenschutz">Datenschutz</a>
+            <a href={siteUrl("impressum.html")}>Impressum</a>
+            <a href={siteUrl("datenschutz.html")}>Datenschutz</a>
             <button onClick={() => setAllergens(true)}>Allergene</button>
           </div>
         </div>
