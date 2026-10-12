@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#efdab1" />
+    <title>
+      Restaurant Familie Dang | Sushi & vietnamesische Küche in Höchstädt
+    </title>
+    <meta
+      name="description"
+      content="Sushi und vietnamesische Küche bei Restaurant Familie Dang in Höchstädt an der Donau. Speisekarte entdecken, Auswahl zusammenstellen und telefonisch anfragen."
+    />
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:locale" content="de_DE" />
+    <meta
+      property="og:title"
+      content="Restaurant Familie Dang – Sushi & vietnamesische Küche"
+    />
+    <meta
+      property="og:description"
+      content="Entdecke unsere Speisekarte. Dillinger Str. 17, 89420 Höchstädt an der Donau."
+    />
+    <meta property="og:image" content="/images/sushi-table.webp" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="preload"
+      href="/fonts/quicksand-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/darker-grotesque-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Restaurant Familie Dang",
+        "servesCuisine": ["Vietnamese", "Sushi"],
+        "telephone": "+4990744299172",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dillinger Str. 17",
+          "postalCode": "89420",
+          "addressLocality": "Höchstädt an der Donau",
+          "addressCountry": "DE"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "11:00",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "12:00",
+            "closes": "22:00"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

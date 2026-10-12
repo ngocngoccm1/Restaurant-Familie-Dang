@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "numberedItems": 185,
+  "extras": 6,
+  "totalItems": 191,
+  "pricedChoices": 318,
+  "categories": 29,
+  "description": "Expected IDs, unique IDs, every per-dish price and global PDF price multiset validated. Source text from separately extracted PDF columns."
+}

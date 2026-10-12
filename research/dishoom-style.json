@@ -1,0 +1,89 @@
+{
+  "height": 11370,
+  "fonts": [
+    "cheltenhamBT, \"cheltenhamBT Fallback\", ui-serif, Georgia, Cambria, \"Times New Roman\", Times, serif",
+    "gill-sans-nova, ui-sans-serif, system-ui, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+  ],
+  "headings": [
+    {
+      "text": "“Look across the bay. You’ll be walking and eating your way through the city that lies before you.”",
+      "style": {
+        "font": "32px",
+        "weight": "400",
+        "color": "rgb(255, 253, 249)"
+      }
+    },
+    {
+      "text": "“From Bombay with Love” ",
+      "style": {
+        "font": "30px",
+        "weight": "700",
+        "color": "rgb(255, 253, 249)"
+      }
+    },
+    {
+      "text": "Each Dishoom is a love letter to Bombay –  its food and its culture, its many varied people, its rich history and its endless eccentricities. ",
+      "style": {
+        "font": "32px",
+        "weight": "400",
+        "color": "rgb(196, 191, 175)"
+      }
+    },
+    {
+      "text": "Peruse menus, book tables, explore gifts and sundries",
+      "style": {
+        "font": "30px",
+        "weight": "400",
+        "color": "rgb(53, 56, 57)"
+      }
+    },
+    {
+      "text": "Take refuge with a warming cup of chai, a simple snack or sublime feast",
+      "style": {
+        "font": "32px",
+        "weight": "400",
+        "color": "rgb(255, 253, 249)"
+      }
+    },
+    {
+      "text": "Take refuge with a warming cup of chai, a simple snack or sublime feast",
+      "style": {
+        "font": "32px",
+        "weight": "400",
+        "color": "rgb(255, 253, 249)"
+      }
+    },
+    {
+      "text": "Eat your way through the city",
+      "style": {
+        "font": "32px",
+        "weight": "400",
+        "color": "rgb(53, 56, 57)"
+      }
+    },
+    {
+      "text": "Dishoom Borough: Walk into our soft launch",
+      "style": {
+        "font": "30px",
+        "weight": "400",
+        "color": "rgb(53, 56, 57)"
+      }
+    },
+    {
+      "text": "A selection of the best recipes from our cafés and beyond",
+      "style": {
+        "font": "30px",
+        "weight": "400",
+        "color": "rgb(53, 56, 57)"
+      }
+    },
+    {
+      "text": "Best Places to Work  - 2025",
+      "style": {
+        "font": "30px",
+        "weight": "400",
+        "color": "rgb(53, 56, 57)"
+      }
+    }
+  ]
+}

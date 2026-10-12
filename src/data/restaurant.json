@@ -1,0 +1,37 @@
+{
+  "name": "Restaurant Familie Dang",
+  "shortName": "Familie Dang",
+  "cuisine": ["Vietnamesisch", "Sushi"],
+  "street": "Dillinger Str. 17",
+  "postalCode": "89420",
+  "city": "Höchstädt an der Donau",
+  "country": "DE",
+  "phone": "09074 4299172",
+  "phoneHref": "tel:+4990744299172",
+  "mobile": "0176 87889979",
+  "mobileHref": "tel:+4917687889979",
+  "hours": [
+    {
+      "days": "Montag – Freitag",
+      "time": "11:00 – 22:00",
+      "schemaDays": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "11:00",
+      "closes": "22:00"
+    },
+    {
+      "days": "Samstag – Sonntag",
+      "time": "12:00 – 22:00",
+      "schemaDays": ["Saturday", "Sunday"],
+      "opens": "12:00",
+      "closes": "22:00"
+    }
+  ],
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Dillinger%20Str.%2017%2C%2089420%20H%C3%B6chst%C3%A4dt%20an%20der%20Donau",
+  "whatsapp": null,
+  "email": null,
+  "socialLinks": [],
+  "orderingApi": null,
+  "orderingPlatform": null,
+  "fulfillmentModes": [],
+  "source": "Tài liệu không có tiêu đề.docx"
+}

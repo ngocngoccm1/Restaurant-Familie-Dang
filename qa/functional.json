@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "checks": [
+    "All 191 menu rows and minimum prices match JSON",
+    "All 29 original categories work",
+    "Search by number, name, umlaut normalization and empty result",
+    "Variant + 2 extras + quantity give exact 42,80 € total",
+    "Quantity controls, clipboard order summary and real phone handoff",
+    "Cart persists across reload",
+    "Water volume and still/sparkling choice",
+    "Juice size and Schorle option",
+    "Coffee hot/cold option",
+    "Mobile sticky cart, drawer, visible handoff controls, remove and total",
+    "Escape closes dialogs",
+    "Mobile navigation opens, navigates and closes",
+    "Correct address, telephone table inquiry, consent-safe external map link",
+    "Gallery lightbox opens and closes",
+    "Allergen legend with source ambiguities",
+    "Variant dialog fits all seven requested widths",
+    "Legal pages expose pending operator details honestly",
+    "All visible images load, no browser errors or failed responses",
+    "Internal anchors, legal routes and PDF return valid destinations",
+    "Reduced motion suppresses hero animation and reveal hiding"
+  ],
+  "errors": [],
+  "badResponses": [],
+  "dialogViewports": [
+    {
+      "width": 375,
+      "rect": {
+        "x": 10,
+        "y": 42.203125,
+        "width": 355,
+        "height": 759.59375,
+        "top": 42.203125,
+        "right": 365,
+        "bottom": 801.796875,
+        "left": 10
+      },
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "rect": {
+        "x": 10,
+        "y": 42.203125,
+        "width": 370,
+        "height": 759.59375,
+        "top": 42.203125,
+        "right": 380,
+        "bottom": 801.796875,
+        "left": 10
+      },
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "rect": {
+        "x": 10,
+        "y": 42.203125,
+        "width": 410,
+        "height": 759.59375,
+        "top": 42.203125,
+        "right": 420,
+        "bottom": 801.796875,
+        "left": 10
+      },
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "rect": {
+        "x": 54,
+        "y": 50,
+        "width": 660,
+        "height": 900,
+        "top": 50,
+        "right": 714,
+        "bottom": 950,
+        "left": 54
+      },
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "rect": {
+        "x": 182,
+        "y": 50,
+        "width": 660,
+        "height": 900,
+        "top": 50,
+        "right": 842,
+        "bottom": 950,
+        "left": 182
+      },
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "rect": {
+        "x": 390,
+        "y": 50,
+        "width": 660,
+        "height": 900,
+        "top": 50,
+        "right": 1050,
+        "bottom": 950,
+        "left": 390
+      },
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "rect": {
+        "x": 630,
+        "y": 50,
+        "width": 660,
+        "height": 900,
+        "top": 50,
+        "right": 1290,
+        "bottom": 950,
+        "left": 630
+      },
+      "overflow": false
+    }
+  ],
+  "links": [
+    "#main",
+    "#start",
+    "/#restaurant",
+    "/#speisekarte",
+    "/#einblicke",
+    "/#kontakt",
+    "tel:+4990744299172",
+    "#speisekarte",
+    "#restaurant",
+    "/speisekarte.pdf",
+    "https://www.google.com/maps/search/?api=1&query=Dillinger%20Str.%2017%2C%2089420%20H%C3%B6chst%C3%A4dt%20an%20der%20Donau",
+    "tel:+4917687889979",
+    "/",
+    "/impressum",
+    "/datenschutz"
+  ]
+}
