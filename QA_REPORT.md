@@ -57,3 +57,13 @@ Screenshots include desktop/mobile full-page, hero, menu, cart, gallery/contact,
 - Re-ran responsive screenshots at 375, 390, 430, 768, 1024, 1440 and 1920px: no horizontal overflow, no broken images. Visually inspected desktop hero, mobile hero and mobile cart screenshots.
 - Independent menu validation passed (318 printed prices); all four cart unit tests passed. Vite emitted a dependency-scan shutdown warning after the unit suite; the production build and browser suite completed without errors.
 - Deployment workflow builds and uploads `dist` to Pages instead of serving the development source `index.html` directly. The GitHub Pages setup is documented in `GITHUB_PAGES.md`.
+
+
+## Client branding revision — 15 October 2026
+
+- Matched the font to the actual PDF: `pdffonts` identifies Saira. Saira variable fonts and OFL license are included locally. Main headings are weight 800; menu descriptions are 15px and story paragraphs 16–17px, including mobile.
+- Replaced sushi imagery with all three client-provided photos, exported to 1920px/720px WebP. Updated hero, gallery captions, lightbox attribution and Open Graph image.
+- Production build for `/Restaurant-Familie-Dang/` passes. Root source `index.html` and generated static `dist/index.html` remain in the GitHub Pages workflow.
+- Complete functional browser QA passes: 191 dishes, 29 categories, search, prices, variants, extras, totals, persistence, phone/clipboard handoff, mobile cart/navigation, legal routes, PDF, gallery, and reduced motion. No failed responses or browser errors.
+- Screenshot review covered desktop/mobile hero, story, dark menu and mobile cart. The first responsive pass found the enlarged gallery note too close to its image at 768px; gallery height was increased to separate the content. Responsive QA now fails explicitly for overlap, overflow or broken images instead of only logging those conditions.
+- Final responsive pass: 375, 390, 430, 768, 1024, 1440 and 1920px all show no horizontal overflow, broken images or gallery-note overlap. Additional brand checks confirm Saira at weight 800 for the hero, readable 15px menu/16px+ story copy, the new client hero photo, header/title fit at all seven widths, and accurate gallery attribution (`qa/brand-refresh.json`).

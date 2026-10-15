@@ -49,8 +49,8 @@ export function Photo({
       className={`photo ${className}`}
       src={siteUrl(`images/${name}.webp`)}
       srcSet={
-        ["sushi-table", "sushi-bowls", "pho", "sake"].includes(name)
-          ? `${siteUrl(`images/${name}-small.webp`)} ${name === "pho" ? 600 : 720}w, ${siteUrl(`images/${name}.webp`)} ${name === "sushi-table" ? 1440 : name === "sushi-bowls" ? 1024 : name === "pho" ? 790 : 972}w`
+        (["sushi-table", "sushi-bowls", "pho", "sake"].includes(name) || name.startsWith("dang-sushi-"))
+          ? `${siteUrl(`images/${name}-small.webp`)} ${name === "pho" ? 600 : 720}w, ${siteUrl(`images/${name}.webp`)} ${name.startsWith("dang-sushi-") ? 1920 : name === "sushi-table" ? 1440 : name === "sushi-bowls" ? 1024 : name === "pho" ? 790 : 972}w`
           : undefined
       }
       sizes={eager ? "100vw" : "(max-width: 640px) 90vw, 600px"}

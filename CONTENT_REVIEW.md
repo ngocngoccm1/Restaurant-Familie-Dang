@@ -28,3 +28,7 @@ The Google Maps link is an address search based on the client Word, not a verifi
 Images and fonts are self-hosted. No advertising/analytics pixels, consent-dependent embeds, remote fonts, social plugins, or automatic Google Maps requests are included. Browser cart stores selection only, not customer/payment information. No generic cookie banner is added for nonexistent trackers. A consent mechanism must be evaluated if third-party embeds/tracking are introduced.
 
 Legal primary sources to consult when completing the operator's final documents: DDG §5 https://www.gesetze-im-internet.de/ddg/__5.html and GDPR https://eur-lex.europa.eu/eli/reg/2016/679/oj. This project does not replace operator-specific legal review.
+
+## Photo update — 15 October 2026
+
+Three new sushi photos were supplied by the client in this chat and used in the website. Their export names and placements are recorded in `research/CLIENT_ASSETS_2026-10-15.md`. Sushi captions now identify the restaurant photographs; other dishes retain their PDF illustration attribution. The previous statement that all website imagery comes from the PDF no longer applies to these sushi sections.

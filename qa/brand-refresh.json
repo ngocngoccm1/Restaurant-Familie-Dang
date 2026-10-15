@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "viewports": [
+    {
+      "width": 375,
+      "font": "Saira, sans-serif",
+      "weight": "800",
+      "bodySize": 16,
+      "menuSize": 15,
+      "photo": "http://localhost:8787/Restaurant-Familie-Dang/images/dang-sushi-platter.webp",
+      "headerFits": true,
+      "storyHeadingFits": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "font": "Saira, sans-serif",
+      "weight": "800",
+      "bodySize": 16,
+      "menuSize": 15,
+      "photo": "http://localhost:8787/Restaurant-Familie-Dang/images/dang-sushi-platter.webp",
+      "headerFits": true,
+      "storyHeadingFits": true,
+      "overflow": false
+    },
+    {
+      "width": 430,
+      "font": "Saira, sans-serif",
+      "weight": "800",
+      "bodySize": 16,
+      "menuSize": 15,
+      "photo": "http://localhost:8787/Restaurant-Familie-Dang/images/dang-sushi-platter.webp",
+      "headerFits": true,
+      "storyHeadingFits": true,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "font": "Saira, sans-serif",
+      "weight": "800",
+      "bodySize": 16,
+      "menuSize": 15,
+      "photo": "http://localhost:8787/Restaurant-Familie-Dang/images/dang-sushi-platter.webp",
+      "headerFits": true,
+      "storyHeadingFits": true,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "font": "Saira, sans-serif",
+      "weight": "800",
+      "bodySize": 16,
+      "menuSize": 15,
+      "photo": "http://localhost:8787/Restaurant-Familie-Dang/images/dang-sushi-platter.webp",
+      "headerFits": true,
+      "storyHeadingFits": true,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "font": "Saira, sans-serif",
+      "weight": "800",
+      "bodySize": 17,
+      "menuSize": 15,
+      "photo": "http://localhost:8787/Restaurant-Familie-Dang/images/dang-sushi-platter.webp",
+      "headerFits": true,
+      "storyHeadingFits": true,
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "font": "Saira, sans-serif",
+      "weight": "800",
+      "bodySize": 17,
+      "menuSize": 15,
+      "photo": "http://localhost:8787/Restaurant-Familie-Dang/images/dang-sushi-platter.webp",
+      "headerFits": true,
+      "storyHeadingFits": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

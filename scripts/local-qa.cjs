@@ -1,6 +1,7 @@
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE || "playwright");
 const baseUrl = process.env.QA_BASE_URL || process.argv[2] || "http://localhost:5173";
 const fs = require("fs");
+const assert = require("node:assert/strict");
 (async () => {
   const b = await chromium.launch({
     headless: true,
@@ -82,6 +83,7 @@ const fs = require("fs");
   fs.writeFileSync("qa/responsive.json", JSON.stringify(report, null, 2));
   console.log(report);
   await b.close();
+  assert(report.every(r => !r.overflow && r.galleryNoteClear && r.brokenImages.length === 0), "Responsive checks failed; see qa/responsive.json");
 })().catch((e) => {
   console.error(e);
   process.exitCode = 1;

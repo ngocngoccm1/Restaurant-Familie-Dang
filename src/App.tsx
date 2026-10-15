@@ -284,18 +284,19 @@ export default function App() {
       )}
       {gallery && (
         <Dialog
-          title="Ein Blick auf unsere Speisekarte"
+          title={gallery.startsWith("dang-sushi-") ? "Sushi bei Familie Dang" : "Ein Blick auf unsere Speisekarte"}
           onClose={() => setGallery(null)}
           className="gallery-dialog"
         >
           <Photo
             name={gallery}
-            alt="Vergrößerte Speisenillustration aus der bereitgestellten Speisekarte"
+            alt={gallery.startsWith("dang-sushi-") ? "Sushi-Auswahl bei Familie Dang" : "Vergrößerte Speisenillustration aus der bereitgestellten Speisekarte"}
             eager
           />
           <p>
-            Illustration aus der Speisekarte. Die tatsächliche Anrichtung kann
-            abweichen.
+            {gallery.startsWith("dang-sushi-")
+              ? "Sushi-Foto von Familie Dang."
+              : "Illustration aus der Speisekarte. Die tatsächliche Anrichtung kann abweichen."}
           </p>
         </Dialog>
       )}

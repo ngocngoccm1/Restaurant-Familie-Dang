@@ -28,7 +28,7 @@ npm run preview
 - `src/lib/cart.ts`, `src/hooks/useCart.ts`: tính giá và lưu giỏ hàng.
 - `src/components/CartDrawer.tsx`: sao chép đơn và gọi điện.
 - `src/components/Legal.tsx`: các trang pháp lý đang chờ thông tin chủ quán.
-- `src/styles.css`: token màu, bố cục và responsive; `src/fonts.css`: font tự host.
+- `src/styles.css`: bố cục gốc; `src/brand.css`: màu nâu/vàng, chữ lớn theo menu và responsive; `src/fonts.css`: Saira tự host.
 - `public/images/`: WebP từ menu được cung cấp; `research/asset-manifest.json`: nguồn trang và mã ảnh trong PDF.
 
 Bộ dữ liệu có **185 mục đánh số + 6 extras = 191 mục**, **318 lựa chọn có giá**, **29 danh mục**. Khoảng trống số món và các lỗi chữ của menu gốc được bảo toàn. `sourcePage` và `sourceText` giúp đối chiếu. Những ký hiệu dị ứng chưa chắc chắn có trong `MENU_REVIEW.md`.
@@ -68,5 +68,5 @@ Chưa triển khai public. Hoàn thiện thông tin chủ quán, pháp lý, ký 
 - `research/`: ảnh chụp mẫu, tài liệu trích xuất và nguồn asset.
 - `qa/`: ảnh chụp website và kết quả kiểm tra.
 
-Font Quicksand và Darker Grotesque có SIL Open Font License, kèm giấy phép trong `public/fonts/`. Không sử dụng hình ảnh, logo hoặc source code của website tham khảo.
+Font Saira khớp font trong PDF menu, có SIL Open Font License kèm trong `public/fonts/`. Ba ảnh sushi mới được khách cung cấp ngày 15/10/2026; nguồn và vị trí có trong `research/CLIENT_ASSETS_2026-10-15.md`. Không sử dụng hình ảnh, logo hoặc source code của website tham khảo.
 "# Restaurant-Familie-Dang" 

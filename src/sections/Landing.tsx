@@ -17,16 +17,14 @@ export default function Landing({
     <>
       <section className="hero" id="start">
         <Photo
-          name="sushi-table"
-          alt="Sushi-Platte mit Nigiri, Maki und Inside-out-Rollen – Illustration aus unserer Speisekarte"
+          name="dang-sushi-platter"
+          alt="Sushi-Platte bei Familie Dang mit Nigiri, Sashimi und Sushi-Rollen auf Bambusbrücken"
           eager
         />
         <div className="hero-caption">
           <span className="eyebrow">Höchstädt an der Donau</span>
-          <h1>
-            Sushi-Bar &<br />
-            vietnamesische Küche.
-          </h1>
+          <h1>Familie<br />Dang<span className="hero-brand-dot">.</span></h1>
+          <p className="hero-cuisine">Sushi-Bar & vietnamesische Küche</p>
           <a
             className="hero-link"
             href="#speisekarte"
@@ -42,7 +40,7 @@ export default function Landing({
         >
           <ArrowDown size={20} strokeWidth={1.5} />
         </a>
-        <span className="hero-image-note">Aus unserer Speisekarte</span>
+        <span className="hero-image-note">Sushi bei Familie Dang</span>
       </section>
       <div className="brand-ribbon" aria-hidden="true">
         <span>Sushi · Phở · Familie Dang</span>
@@ -77,18 +75,18 @@ export default function Landing({
             </Frame>
             <div className="story-photo">
               <Photo
-                name="sushi-bowls"
-                alt="Bunte Sushi Bowls mit Reis, Avocado und Gemüse aus der bereitgestellten Speisekarte"
+                name="dang-sushi-rolls"
+                alt="Sushi-Rollen, Nigiri und Sashimi bei Familie Dang"
               />
               <span className="photo-caption">
-                Eine Auswahl aus unserer Speisekarte.
+                Unsere Sushi-Bar. Zum Entdecken und Teilen.
               </span>
             </div>
           </div>
           <div className="menu-discovery">
             <SectionRule>Von Phở bis Sushi</SectionRule>
             <p className="discovery-copy">
-              Eine warme Suppe. Eine frische Rolle. Eine Platte zum Teilen.
+              Eine warme Suppe. Eine frische Rolle. Eine Platte zum Teilen.{" "}
               <br />
               Entdecke, worauf du heute Lust hast.
             </p>
@@ -104,8 +102,8 @@ export default function Landing({
                 },
                 {
                   title: "Sushi-Bar",
-                  img: "maki",
-                  alt: "Maki Sushi aus der Speisekarte",
+                  img: "dang-sushi-detail",
+                  alt: "Sushi-Auswahl bei Familie Dang mit Lachs, Thunfisch und Inside-out-Rollen",
                   category: "Family Dang",
                   label: "Sushi entdecken",
                   number: "02",
@@ -184,8 +182,8 @@ export default function Landing({
       </section>
       <section className="photo-break" aria-label="Sushi zum Teilen">
         <Photo
-          name="sushi-closeup"
-          alt="Nahaufnahme einer Sushi-Auswahl aus dem bereitgestellten Menü"
+          name="dang-sushi-detail"
+          alt="Sushi-Auswahl mit Sashimi, Nigiri und Rollen bei Familie Dang"
         />
         <div>
           <span className="eyebrow">Nigiri · Maki · Family Dang</span>
@@ -250,12 +248,12 @@ export default function Landing({
           </Frame>
           <button
             className="gallery-image gallery-one"
-            onClick={() => onGallery("sushi-selection")}
+            onClick={() => onGallery("dang-sushi-rolls")}
             aria-label="Sushi-Auswahl vergrößern"
           >
             <Photo
-              name="sushi-selection"
-              alt="Inside-out-Rollen und frittierte Sushi-Rollen aus dem Menü"
+              name="dang-sushi-rolls"
+              alt="Frisch angerichtete Sushi-Rollen bei Familie Dang"
             />
             <span>
               Die Sushi-Bar <Arrow />
@@ -285,8 +283,8 @@ export default function Landing({
             </span>
           </button>
           <p className="gallery-note">
-            Speisenbilder aus der bereitgestellten Speisekarte. Die tatsächliche
-            Anrichtung kann abweichen.
+            Sushi-Fotos von Familie Dang. Weitere Speisenbilder stammen aus der
+            bereitgestellten Speisekarte; die Anrichtung kann abweichen.
           </p>
         </div>
       </section>
