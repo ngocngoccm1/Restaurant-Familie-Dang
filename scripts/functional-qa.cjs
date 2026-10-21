@@ -115,8 +115,14 @@ const fs = require("fs"),
       .getAttribute("href"),
     "tel:+4990744299172",
   );
-  assert((await dialog.innerText()).includes("nicht automatisch übermittelt"));
-  check("Quantity controls, clipboard order summary and real phone handoff");
+  const whatsapp = dialog.getByRole("link", { name: "Über WhatsApp bestellen" });
+  const whatsappUrl = new URL(await whatsapp.getAttribute("href"));
+  assert.equal(whatsappUrl.origin, "https://wa.me");
+  assert.equal(whatsappUrl.pathname, "/4917687889979");
+  assert.equal(whatsappUrl.searchParams.get("text"), copied.replace(/\r\n/g, "\n"));
+  assert((await dialog.innerText()).includes("Senden"));
+  assert((await dialog.innerText()).includes("Bestätigung"));
+  check("Quantity controls, clipboard, exact WhatsApp recipient/order text and phone fallback");
   await dialog.getByRole("button", { name: "Schließen" }).click();
   await p.reload({ waitUntil: "networkidle" });
   await p.getByRole("button", { name: /Warenkorb öffnen, 2 Artikel/ }).click();
@@ -165,6 +171,19 @@ const fs = require("fs"),
   assert(
     await dialog.getByRole("link", { name: "Restaurant anrufen" }).isVisible(),
   );
+  const mobileWhatsapp = dialog.getByRole("link", { name: "Über WhatsApp bestellen" });
+  assert((new URL(await mobileWhatsapp.getAttribute("href"))).searchParams.get("text").includes("57,10"));
+  const cta = await mobileWhatsapp.boundingBox();
+  assert(cta && cta.y >= 0 && cta.y + cta.height <= 844);
+  // Intercept the external destination: test the click without contacting the restaurant.
+  await context.route("https://wa.me/**", route => route.fulfill({contentType: "text/html", body: "WhatsApp handoff test"}));
+  const [popup] = await Promise.all([context.waitForEvent("page"), mobileWhatsapp.click()]);
+  await popup.waitForLoadState();
+  assert.equal(new URL(popup.url()).pathname, "/4917687889979");
+  assert(new URL(popup.url()).searchParams.get("text").includes("57,10"));
+  await popup.close();
+  assert((await dialog.locator(".total").innerText()).includes("57,10"));
+  check("Mobile WhatsApp CTA is visible, opens the correct order in a new tab and preserves cart");
   await p.screenshot({ path: "qa/mobile-cart.png" });
   const overflow = await dialog.evaluate((e) => e.scrollWidth > e.clientWidth);
   assert(!overflow);
@@ -203,7 +222,7 @@ const fs = require("fs"),
   );
   await p.locator(".gallery-one").scrollIntoViewIfNeeded();
   await p.locator(".gallery-one").click();
-  assert(await p.getByRole("dialog").locator("img").isVisible());
+  await p.getByRole("dialog").locator("img").waitFor({ state: "visible" });
   await p.keyboard.press("Escape");
   check("Gallery lightbox opens and closes");
   await p.locator(".menu-tools button").scrollIntoViewIfNeeded();

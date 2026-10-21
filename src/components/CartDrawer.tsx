@@ -1,8 +1,8 @@
 import { siteUrl } from "../lib/urls";
 import { useEffect, useState } from "react";
-import { Copy, Minus, Plus, ShoppingBag, Trash2, Phone } from "lucide-react";
+import { Copy, Minus, Plus, ShoppingBag, Trash2, Phone, MessageCircle } from "lucide-react";
 import restaurant from "../data/restaurant.json";
-import { dishById, money, orderText, unitPrice } from "../lib/cart";
+import { dishById, money, orderText, unitPrice, whatsappOrderUrl } from "../lib/cart";
 import type { CartController } from "../hooks/useCart";
 import { Dialog, Arrow } from "./UI";
 export default function CartDrawer({
@@ -53,7 +53,7 @@ export default function CartDrawer({
               Zum Genießen.
             </h2>
             <p className="fine-print">
-              Deine Auswahl für den Anruf beim Restaurant.
+              Deine Auswahl für die Bestellung per WhatsApp.
             </p>
             <div className="cart-lines">
               {cart.cart.map((line) => {
@@ -128,21 +128,36 @@ export default function CartDrawer({
             <span>Gesamtsumme</span>
             <b>{money(cart.total)}</b>
           </div>
-          <button className="button solid" onClick={copy}>
-            <Copy size={16} />
-            {copied ? "Auswahl kopiert" : "Auswahl kopieren"}
-            <Arrow />
-          </button>
-          <a className="button" href={restaurant.phoneHref}>
-            <Phone size={16} />
-            Restaurant anrufen
+          <a
+            className="button solid whatsapp-order"
+            href={whatsappOrderUrl(cart.cart)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageCircle size={18} />
+            Über WhatsApp bestellen
             <Arrow />
           </a>
-          <p className="fine-print" role="status">
-            {copyFailed
-              ? "Kopieren ist hier nicht verfügbar. Du kannst den Bestelltext oben markieren und kopieren."
-              : "Die Auswahl wird nicht automatisch übermittelt. Verfügbarkeit sowie Abholung oder Lieferung bitte telefonisch klären. Eine Bestellung ist erst nach Bestätigung durch das Restaurant verbindlich."}
+          <div className="cart-alternatives">
+            <button className="button" onClick={copy}>
+              <Copy size={16} />
+              {copied ? "Auswahl kopiert" : "Auswahl kopieren"}
+            </button>
+            <a className="button" href={restaurant.phoneHref}>
+              <Phone size={16} />
+              Restaurant anrufen
+            </a>
+          </div>
+          <p className="fine-print">
+            WhatsApp öffnet deinen Bestelltext. Dort auf „Senden“ tippen.
+            Deine Bestellung gilt erst nach Bestätigung durch das Restaurant.
           </p>
+          {copyFailed && (
+            <p className="fine-print" role="status">
+              Kopieren ist hier nicht verfügbar. Du kannst den Bestelltext oben
+              markieren und kopieren.
+            </p>
+          )}
         </div>
       )}
     </Dialog>

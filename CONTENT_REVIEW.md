@@ -18,7 +18,7 @@ The Google Maps link is an address search based on the client Word, not a verifi
 - Actual hosting provider and data processing details for complete `/datenschutz`, including controller contact, server logs, recipients, retention periods and rights information. Existing page describes current implementation honestly and flags missing operator/hosting information.
 - Confirm corrected allergen/additive table and ambiguous menu entries in `MENU_REVIEW.md`.
 - Confirm rights to photographs embedded in the provided menu. Source assets are mapped by PDF page and image xref in `research/asset-manifest.json`.
-- Provide verified ordering platform/API or explicitly verified WhatsApp number if desired. Existing mobile number is used only as a telephone link. Confirm fulfillment modes; currently neither pickup nor delivery is sold or promised.
+- WhatsApp ordering number **+49 176 87889979** explicitly confirmed by the client on 21 October 2026. Cart now opens a prefilled chat to this number. Customer sends the message in WhatsApp; restaurant confirmation is still required. Confirm fulfillment modes; currently neither pickup nor delivery is sold or promised.
 - Provide booking service and/or confirmation that telephone reservations are accepted. Current links invite a table inquiry; they do not claim confirmed reservations.
 - Provide email/social accounts, restaurant logo and interior photographs if desired. Text wordmark is new typography, not a copied logo.
 - Set final public domain, canonical URL, `og:url` and an absolute `og:image` URL after hosting is decided. Relative local OG image is only preparatory.

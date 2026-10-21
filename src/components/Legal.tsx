@@ -56,9 +56,18 @@ export default function Legal({ page }: { page: "impressum" | "datenschutz" }) {
             Mengen und Auswahloptionen. Es werden keine Namen, Adressen oder
             Zahlungsdaten abgefragt. Du kannst den Warenkorb über die
             Mengensteuerung oder die Entfernen-Schaltflächen leeren. Die Auswahl
-            wird nicht an einen Server gesendet.
+            wird nicht automatisch an das Restaurant übermittelt.
           </p>
-          <h2>Telefon und Kopieren</h2>
+          <h2>WhatsApp, Telefon und Kopieren</h2>
+          <p>
+            „Über WhatsApp bestellen“ öffnet einen externen WhatsApp-Link zur
+            Nummer +{restaurant.whatsapp}. Dabei wird dein Bestelltext mit
+            Gerichten, Varianten, Extras, Mengen und Gesamtsumme an WhatsApp
+            übergeben. Erst wenn du dort auf „Senden“ tippst, wird die Nachricht
+            an das Restaurant gesendet. Es gelten die Datenschutzinformationen
+            von WhatsApp. Die Website lädt WhatsApp erst nach deinem Klick;
+            alternativ kannst du telefonisch bestellen.
+          </p>
           <p>
             Telefonlinks öffnen die Telefonfunktion deines Geräts. Beim Klick
             auf „Auswahl kopieren“ wird der sichtbare Bestelltext in deine

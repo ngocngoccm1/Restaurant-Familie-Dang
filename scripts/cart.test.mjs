@@ -9,6 +9,7 @@ const {
   cartTotal,
   restoreCart,
   orderText,
+  whatsappOrderUrl,
 } = await server.ssrLoadModule("/src/lib/cart.ts");
 const pick = (itemId, variantId, extras = [], options = {}, quantity = 1) => ({
   itemId,
@@ -76,5 +77,18 @@ test("drink volume, juice presentation, temperature, and quantities survive relo
   assert(text.includes("86,90") === false);
   assert(text.includes("173,80"));
   assert(text.includes("noch keine bestätigte Bestellung"));
+});
+test("WhatsApp handoff preserves the full Unicode order and exact recipient", () => {
+  const cart = [normalizeSelection(pick("21", "C", ["extra-rice", "extra-peanut"], {}, 2))];
+  const link = new URL(whatsappOrderUrl(cart));
+  assert.equal(link.origin, "https://wa.me");
+  assert.equal(link.pathname, "/4917687889979");
+  assert.equal(link.searchParams.get("text"), orderText(cart));
+  const text = link.searchParams.get("text");
+  for (const value of ["2 ×", "Nr. 21", "PHO", "Rindfleisch", "Reis", "Erdnüsse-Soße", "42,80", "€", "keine bestätigte Bestellung"])
+    assert(text.includes(value), value);
+  assert(text.includes("\n"));
+  assert(!text.includes("telefonisch"));
+  assert(new URL(whatsappOrderUrl([{ ...cart[0], quantity: 3 }])).searchParams.get("text").includes("64,20"));
 });
 await server.close();

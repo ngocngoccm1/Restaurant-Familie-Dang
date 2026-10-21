@@ -1,4 +1,5 @@
 import data from "../data/menu.json";
+import restaurant from "../data/restaurant.json";
 import type { CartLine, Dish, Selection } from "../types.ts";
 export const dishes = data.items as Dish[];
 export const dishById = new Map(dishes.map((dish) => [dish.id, dish]));
@@ -96,7 +97,8 @@ export function restoreCart(value: string | null): CartLine[] {
 }
 export function orderText(cart: CartLine[]): string {
   return [
-    "Restaurant Familie Dang — Speisenauswahl",
+    "Hallo Familie Dang, ich möchte folgende Gerichte bestellen:",
+    "",
     ...cart.map((line) => {
       const dish = dishById.get(line.itemId)!;
       const details = [
@@ -110,7 +112,10 @@ export function orderText(cart: CartLine[]): string {
     }),
     "",
     `Gesamtsumme: ${money(cartTotal(cart))}`,
-    "Bitte Verfügbarkeit und die Möglichkeit zur Abholung oder Lieferung telefonisch klären.",
+    "Bitte bestätigt die Verfügbarkeit und teilt mir mit, ob Abholung oder Lieferung möglich ist.",
     "Diese Auswahl ist noch keine bestätigte Bestellung.",
   ].join("\n");
+}
+export function whatsappOrderUrl(cart: CartLine[]): string {
+  return `https://wa.me/${restaurant.whatsapp}?text=${encodeURIComponent(orderText(cart))}`;
 }

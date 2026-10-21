@@ -33,7 +33,7 @@ npm run preview
 
 Bộ dữ liệu có **185 mục đánh số + 6 extras = 191 mục**, **318 lựa chọn có giá**, **29 danh mục**. Khoảng trống số món và các lỗi chữ của menu gốc được bảo toàn. `sourcePage` và `sourceText` giúp đối chiếu. Những ký hiệu dị ứng chưa chắc chắn có trong `MENU_REVIEW.md`.
 
-Giỏ hàng chỉ chuẩn bị lựa chọn. Người dùng có thể sao chép và gọi điện; website không tự gửi đơn, thu tiền, hứa giao hàng/nhận tại quán hoặc báo đặt hàng thành công. Khi có API/platform/WhatsApp được xác minh, tích hợp kênh này tại `CartDrawer.tsx` và bổ sung kiểm tra thành công/thất bại thật.
+Khách đặt món qua WhatsApp số **+49 176 87889979**, được chủ website xác nhận ngày 21/10/2026. Nút trong giỏ hàng mở WhatsApp với đầy đủ món, biến thể, extras, số lượng và tổng tiền; khách cần bấm Gửi và chờ quán xác nhận. Có nút sao chép và gọi điện dự phòng. Website không thu tiền, tự gửi tin nhắn, hứa giao hàng/nhận tại quán hoặc báo thành công giả. Số WhatsApp cấu hình trong `src/data/restaurant.json`; nội dung đơn và URL nằm trong `src/lib/cart.ts`.
 
 ## Kiểm tra
 

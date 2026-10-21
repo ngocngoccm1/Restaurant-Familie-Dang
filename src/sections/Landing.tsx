@@ -219,20 +219,19 @@ export default function Landing({
               genießen.
             </h2>
             <p>
-              Stelle deine Gerichte im Warenkorb zusammen. Kopiere deine Auswahl
-              und ruf uns an, um die Bestellung, Verfügbarkeit und die
-              Möglichkeiten zur Abholung oder Lieferung zu besprechen.
+              Stelle deine Gerichte im Warenkorb zusammen und sende deine
+              Bestellung per WhatsApp an uns. Verfügbarkeit und die Möglichkeiten
+              zur Abholung oder Lieferung klären wir gemeinsam im Chat.
             </p>
             <button className="button" onClick={onCart}>
-              Warenkorb öffnen
+              Bestellung zusammenstellen
               <Arrow />
             </button>
             <a className="text-link" href={restaurant.phoneHref}>
               {restaurant.phone} <Arrow />
             </a>
             <p className="fine-print">
-              Eine Online-Übermittlung der Bestellung ist derzeit nicht
-              verfügbar.
+              In WhatsApp auf „Senden“ tippen und unsere Bestätigung abwarten.
             </p>
           </Frame>
         </div>
