@@ -1,6 +1,7 @@
 {
   "name": "Restaurant Familie Dang",
   "shortName": "Familie Dang",
+  "businessNumber": "69454253",
   "cuisine": ["Vietnamesisch", "Sushi"],
   "street": "Dillinger Str. 17",
   "postalCode": "89420",

@@ -188,6 +188,7 @@ export default function App() {
             <Arrow />
           </a>
         </div>
+        <p className="footer-business-number">Betriebsnummer: {restaurant.businessNumber}</p>
         <div className="footer-bottom">
           <span>© 2026 Restaurant Familie Dang</span>
           <div>

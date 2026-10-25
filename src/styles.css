@@ -348,7 +348,7 @@ main {
   border-top: 4px solid var(--edge);
   animation: caption-in 0.8s 0.25s both;
 }
-.hero-caption h1 {
+.hero-caption h2 {
   font-size: clamp(36px, 4vw, 56px);
   letter-spacing: -0.015em;
   margin: 12px 0 20px;
@@ -1923,7 +1923,7 @@ main {
     border-top-width: 3px;
     background: var(--white);
   }
-  .hero-caption h1 {
+  .hero-caption h2 {
     font-size: 36px;
     line-height: 0.98;
     margin: 11px 0 16px;
@@ -2659,7 +2659,7 @@ main {
     left: 16px;
     padding-inline: 17px;
   }
-  .hero-caption h1 {
+  .hero-caption h2 {
     font-size: 34px;
   }
   .hours-row {
@@ -2733,7 +2733,7 @@ main {
     max-width: 420px;
     padding: 23px 27px 26px;
   }
-  .hero-caption h1 {
+  .hero-caption h2 {
     font-size: 48px;
   }
 }
