@@ -32,9 +32,3 @@ Legal primary sources to consult when completing the operator's final documents:
 ## Photo update — 15 October 2026
 
 Three new sushi photos were supplied by the client in this chat and used in the website. Their export names and placements are recorded in `research/CLIENT_ASSETS_2026-10-15.md`. Sushi captions now identify the restaurant photographs; other dishes retain their PDF illustration attribution. The previous statement that all website imagery comes from the PDF no longer applies to these sushi sections.
-
-## Betriebsnummer and ordering introduction — 25 October 2026
-
-- Client supplied **Betriebsnummer: 69454253**. Stored as `businessNumber` and displayed with that exact label in Impressum and the footer; this is not presented as a VAT ID or commercial-register number.
-- Client requested that the ordering/delivery information shown in their screenshot appear at the top of the homepage. The new first section follows its heading, menu link, conditions rows and contact-action composition, using Familie Dang's existing colors and verified phone/WhatsApp flow.
-- The screenshot is branded Viet.Family and lists Uelzen, a 30 € minimum, 2 € delivery fee and another telephone number. These details have not been confirmed for Familie Dang and were not copied. Delivery area/minimum/fee currently read “Bitte anfragen”; no charge is added to the cart. The client was asked to confirm these three values. Restaurant address remains Höchstädt; service availability is to be discussed with the restaurant.

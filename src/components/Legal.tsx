@@ -25,7 +25,6 @@ export default function Legal({ page }: { page: "impressum" | "datenschutz" }) {
             <br />
             Mobil: <a href={restaurant.mobileHref}>{restaurant.mobile}</a>
           </p>
-          <p>Betriebsnummer: {restaurant.businessNumber}</p>
           <h2>Noch nicht vollständig</h2>
           <p>
             Die bereitgestellten Unterlagen enthalten keinen vollständigen Namen

@@ -52,7 +52,7 @@ h2 { font-size: clamp(36px, 3.7vw, 54px); }
   padding: 28px 34px 30px;
   box-shadow: 0 16px 45px #1d161c40;
 }
-.hero-caption h2 { font-size: clamp(52px, 5.3vw, 78px); line-height: .98; letter-spacing: -.025em; text-transform: uppercase; margin: 18px 0; }
+.hero-caption h1 { font-size: clamp(52px, 5.3vw, 78px); line-height: .98; letter-spacing: -.025em; text-transform: uppercase; margin: 18px 0; }
 .hero-brand-dot { color: #fffdf7; }
 .hero-caption .eyebrow { color: var(--menu-gold); font-size: 12px; }
 .hero-cuisine { font-size: 18px; line-height: 1.4; color: #fff8e6; font-weight: 600; max-width: 310px; margin-bottom: 24px; }
@@ -189,7 +189,7 @@ h2 { font-size: clamp(36px, 3.7vw, 54px); }
   .hero { min-height: 710px; height: calc(100svh - 68px); }
   .hero > .photo { object-position: 52% 40%; }
   .hero-caption { left: 18px; right: 44px; bottom: 36px; padding: 20px 23px; max-width: 350px; }
-  .hero-caption h2 { font-size: clamp(43px, 12vw, 53px); margin: 14px 0; }
+  .hero-caption h1 { font-size: clamp(43px, 12vw, 53px); margin: 14px 0; }
   .hero-caption .eyebrow { font-size: 11px; letter-spacing: .07em; }
   .hero-cuisine { font-size: 16px; margin-bottom: 17px; }
   .hero-link { font-size: 12px; letter-spacing: .02em; }
@@ -313,56 +313,3 @@ h2 { font-size: clamp(36px, 3.7vw, 54px); }
   text-transform: none;
 }
 .cart-alternatives svg { flex-shrink: 0; }
-
-/* Ordering information is the first content below the floating navigation. */
-.ordering-intro {
-  background: var(--deep);
-  color: var(--white);
-  padding: 156px 0 76px;
-  --gold: #e4c478;
-  --line: #a18553;
-}
-.ordering-intro .section-rule { margin-bottom: 50px; }
-.ordering-intro-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; }
-.ordering-intro h1 {
-  font-size: clamp(38px, 4.4vw, 65px);
-  text-transform: uppercase;
-  letter-spacing: -.035em;
-  line-height: 1.1;
-  overflow-wrap: anywhere;
-}
-.ordering-intro h1 span { color: var(--menu-gold); }
-.ordering-intro-copy > p { margin-top: 26px; font-size: 18px; color: #e5d9c5; }
-.ordering-menu-link { display: inline-flex; align-items: center; gap: 24px; border-bottom: 1px solid var(--menu-gold); padding: 18px 0; margin-top: 24px; font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
-.delivery-facts { margin: 0 0 32px; }
-.delivery-facts > div { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-top: 1px solid #a1855366; padding: 21px 0; }
-.delivery-facts > div:last-child { border-bottom: 1px solid #a1855366; }
-.delivery-facts dt { font-size: 16px; color: #e5d9c5; }
-.delivery-facts dd { margin: 0; font-size: 24px; font-weight: 700; text-align: right; color: var(--menu-gold); }
-.ordering-intro-details > .eyebrow { color: #e5d9c5; }
-.ordering-cart { width: 100%; margin-top: 14px; background: var(--menu-gold); color: var(--deep); border-color: var(--menu-gold); }
-.ordering-cart:hover { background: #fff1c4; color: var(--deep); }
-.ordering-phone { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 20px 0; font-weight: 700; font-size: clamp(25px, 2.6vw, 37px); border-bottom: 1px solid #a1855366; }
-.ordering-phone svg { flex-shrink: 0; width: 26px; height: 26px; color: var(--menu-gold); }
-.ordering-note { margin-top: 18px; font-size: 14px; color: #e5d9c5; }
-.footer-business-number { font-size: 14px; margin: 0 0 22px; }
-@media (max-width: 1024px) {
-  .ordering-intro-grid { gap: 34px; grid-template-columns: 1fr 1fr; }
-  .ordering-intro h1 { font-size: 40px; }
-  .delivery-facts > div { gap: 12px; flex-wrap: wrap; }
-  .delivery-facts dd { font-size: 22px; }
-}
-@media (max-width: 640px) {
-  .ordering-intro { padding: 112px 0 48px; }
-  .ordering-intro .section-rule { font-size: 11px; gap: 12px; margin-bottom: 30px; }
-  .ordering-intro-grid { grid-template-columns: 1fr; gap: 40px; }
-  .ordering-intro h1 { font-size: clamp(32px, 9vw, 42px); }
-  .ordering-intro-copy > p { font-size: 16px; margin-top: 22px; }
-  .ordering-menu-link { font-size: 13px; margin-top: 18px; }
-  .delivery-facts dt { font-size: 14px; }
-  .delivery-facts dd { font-size: 20px; }
-  .delivery-facts > div { gap: 12px; padding-block: 18px; }
-  .ordering-phone { font-size: 30px; }
-  .ordering-note { font-size: 13px; }
-  .footer-business-number { font-size: 13px; }
-}

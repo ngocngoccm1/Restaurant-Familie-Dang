@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import OrderingIntro from "./OrderingIntro";
 import { Phone, MapPin, Clock, ArrowDown } from "lucide-react";
 import restaurant from "../data/restaurant.json";
 import { Arrow, Frame, Photo, SectionRule } from "../components/UI";
@@ -16,9 +15,7 @@ export default function Landing({
 }) {
   return (
     <>
-      <div id="start" />
-      <OrderingIntro onCart={onCart} />
-      <section className="hero">
+      <section className="hero" id="start">
         <Photo
           name="dang-sushi-platter"
           alt="Sushi-Platte bei Familie Dang mit Nigiri, Sashimi und Sushi-Rollen auf Bambusbrücken"
@@ -26,7 +23,7 @@ export default function Landing({
         />
         <div className="hero-caption">
           <span className="eyebrow">Höchstädt an der Donau</span>
-          <h2>Familie<br />Dang<span className="hero-brand-dot">.</span></h2>
+          <h1>Familie<br />Dang<span className="hero-brand-dot">.</span></h1>
           <p className="hero-cuisine">Sushi-Bar & vietnamesische Küche</p>
           <a
             className="hero-link"
@@ -203,6 +200,40 @@ export default function Landing({
             Sushi-Menüs entdecken
             <Arrow />
           </a>
+        </div>
+      </section>
+      <section id="bestellung" className="order-section section-gap">
+        <div className="container story-pair">
+          <div className="order-photo">
+            <Photo
+              name="summer-rolls"
+              alt="Sommerrollen mit Salat und Reisnudeln aus der Speisekarte"
+            />
+          </div>
+          <Frame label="Deine Auswahl" className="reveal">
+            <h2>
+              Erst aussuchen.
+              <br />
+              Dann gemeinsam
+              <br />
+              genießen.
+            </h2>
+            <p>
+              Stelle deine Gerichte im Warenkorb zusammen und sende deine
+              Bestellung per WhatsApp an uns. Verfügbarkeit und die Möglichkeiten
+              zur Abholung oder Lieferung klären wir gemeinsam im Chat.
+            </p>
+            <button className="button" onClick={onCart}>
+              Bestellung zusammenstellen
+              <Arrow />
+            </button>
+            <a className="text-link" href={restaurant.phoneHref}>
+              {restaurant.phone} <Arrow />
+            </a>
+            <p className="fine-print">
+              In WhatsApp auf „Senden“ tippen und unsere Bestätigung abwarten.
+            </p>
+          </Frame>
         </div>
       </section>
       <section id="einblicke" className="gallery-section section-gap">
